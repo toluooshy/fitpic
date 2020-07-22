@@ -1,0 +1,27 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'outfits/style.css' %}">
+
+<head>
+    <ul class="topnav">
+        <li><a class="logo" href="/" style="font-style: italic; font-size: small; color: #6e5533;">fitpic</a></li>
+        <li><a href="outfit">Get Outfit</a></li>
+        <li><a href="inventory">Inventory</a></li>
+        <li class="right"><a href="http://toshinowo.co/">Dev's Page</a></li>
+        <li class="right"><a href="about">About</a></li>
+    </ul>
+</head>
+
+<body>
+<h3 style="padding: 15; font-style: italic;">Welcome To "fitpick", your Virtual Wardrobe.</h3>
+
+{% for clothes in clothes %}
+    <div style="background-color: #f8e4b8; padding: 15; font-style:unset;">
+        <span>{{clothes}}</span>
+        <a class="button update" href="{% url 'updateclothing' clothes.id %}">update</a>
+        <a class="button delete" href="{% url 'deleteclothing' clothes.id %}">delete</a>
+    </div>
+    <hr/>
+{% endfor %}
+
+</body>
