@@ -1,21 +1,29 @@
 @font-face {
-    font-family: QuietStreets;
-    src: url(QuietStreets.ttf);
- }
-
- @font-face {
-    font-family: KenyanCoffee;
-    src: url(KenyanCoffee.ttf);
- }
-
-head {
-   font-family: QuietStreets;
+  font-family: QuietStreets;
+  src: url(QuietStreets.ttf);
 }
 
+@font-face {
+  font-family: KenyanCoffee;
+  src: url(KenyanCoffee.ttf);
+}
+
+head {
+  font-family: QuietStreets;
+}
 
 body {
-    margin: 0;
-    font-family: KenyanCoffee;
+  margin: 0;
+  font-family: KenyanCoffee;
+  background: linear-gradient(#ffffff, #f0f0f0);
+}
+
+h1 {
+  text-shadow: 0 0 10px #eee;
+}
+
+h3 {
+  text-shadow: 0 0 10px #eee;
 }
 
 ul.topnav {
@@ -48,38 +56,38 @@ ul.topnav li.right {float: right;}
 }
 
 .button {
-    background-color: #888;
-    border: none;
-    border-radius: 10%;
-    color: white;
-    padding: 2px 4px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-  }
-  
-  .update {
-    background-color: #f8e4b8;
-    color: #d2b48c; 
-    border: 2px solid #d2b48c;
-  }
-  
-  .update:hover {
-    background-color: #d2b48c;
-    color: white;
-  }
-  
-  .delete {
-    background-color: #f8e4b8;
-    color: #fa8072; 
-    border: 2px solid #fa8072;
-  }
-  
-  .delete:hover {
-    background-color: #fa8072;
-    color: white;
-  }
+  background-color: #888;
+  border: none;
+  border-radius: 10%;
+  color: white;
+  padding: 5 20;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: -6 12;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.update {
+  background-color: #f8e4b8;
+  color: #d2b48c; 
+  border: 2px solid #d2b48c;
+}
+
+.update:hover {
+  background-color: #d2b48c;
+  color: white;
+}
+
+.delete {
+  background-color: #f8e4b8;
+  color: #fa8072; 
+  border: 2px solid #fa8072;
+}
+
+.delete:hover {
+  background-color: #fa8072;
+  color: white;
+}

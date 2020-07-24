@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+# MODELS:
 
 clothingCategories = (
     ('TOPS', 'Tops (shirts, sweaters, jackets,...)'),

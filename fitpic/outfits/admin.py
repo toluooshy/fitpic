@@ -1,7 +1,6 @@
 from django.contrib import admin
-
-# Register your models here.
-
 from .models import *
+
+# RGERSTERED MODELS:
 
 admin.site.register(Clothing)
