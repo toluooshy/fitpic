@@ -87,6 +87,7 @@ def updateClothing(request, pk):
     call_command('makemigrations')
     call_command('migrate')
     clothes = Clothing.objects.get(id=pk)
+    item = Clothing.objects.get(id=pk)
 
     form = ClothingForm(instance=clothes)
 
@@ -96,7 +97,7 @@ def updateClothing(request, pk):
             form.save()
             return redirect('/inventory')
 
-    context = {'form':form}
+    context = {'form':form, 'item':item}
 
     return render(request, 'outfits/updateclothing.html', context)
 

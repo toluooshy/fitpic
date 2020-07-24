@@ -1,8 +1,29 @@
-<p>Are you sure you want to trash "{{item}}"?</p>
+{% load static %}
 
-<a href="{% url 'inventory' %}" >Cancel</a>
+<link rel="stylesheet" type="text/css" href="{% static 'outfits/style.css' %}">
 
-<form method="POST" action="">
+<head>
+    <ul class="topnav">
+        <li><a class="logo" href="/" style="font-style: italic; font-size: small; color: #6e5533;">fitpic</a></li>
+        <li><a href="/outfit">Get Outfit</a></li>
+        <li><a href="/inventory">Inventory</a></li>
+        <li class="right"><a href="http://toshinowo.co/">Dev's Page</a></li>
+        <li class="right"><a href="/about">About</a></li>
+    </ul>
+</head>
+
+<body>
+<h3 style="margin-left: 15; margin-bottom: 0; text-align: center;">💥💥💥</h3>
+<h1 style="margin-left: 15; margin-top: 0; text-align: center;">Delete "{{item}}"?</h1>
+
+<span style="color: #880808; font-size: larger; font-style: italic; margin-left: 15; margin-bottom: 0;">Confirmation:</span>
+<form style="background-color: #d2b48c; margin: 0; padding-top: 5; padding-left: 15; padding-bottom: 5;" method="POST" action="">
     {% csrf_token %}
-    <input type="submit" name="confirm">
+    <input type="submit" name="confirm" value="Trash It">
 </form>
+<form style="background-color: #d2b48c; margin: 0; padding-top: 5; padding-left: 15; padding-bottom: 5;" action="/inventory">
+    {% csrf_token %}
+    <input type="submit" name="quit" value="Nvm">
+</form>
+
+</body>

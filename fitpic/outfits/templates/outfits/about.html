@@ -4,11 +4,11 @@
 
 <head>
     <ul class="topnav">
-        <li><a class="logo" href="/" style="font-style: italic; font-size: small; color: #6e5533;">fitpic_</a></li>
-        <li><a href="outfit">Get Outfit</a></li>
-        <li><a href="inventory">Inventory</a></li>
+        <li><a class="logo" href="/" style="font-style: italic; font-size: small; color: #6e5533;">fitpic</a></li>
+        <li><a href="/outfit">Get Outfit</a></li>
+        <li><a href="/inventory">Inventory</a></li>
         <li class="right"><a href="http://toshinowo.co/">Dev's Page</a></li>
-        <li class="right"><a href="about">About</a></li>
+        <li class="right"><a href="/about">About</a></li>
     </ul>
 </head>
 
@@ -17,24 +17,31 @@
 <h1 style="margin-left: 15; margin-top: 0; text-align: center;">Project Summary:</h1>
 
 
-<p style="color: #880808; font-size: larger; font-style: italic; margin-left: 15; margin-bottom: 0;">Add Something:</p>
-<form style="background-color: #d2b48c; padding-top: 5; padding-left: 15; padding-bottom: 5;" method="POST" action="/inventory">
-    {% csrf_token %}
-    <span style="margin-right: 10;">Attire Name:</span><span>{{form.title}}</span>
-    <hr style="height: 0; visibility: hidden;"/>
-    <span style="margin-right: 15;">Attire Type:</span>{{form.category}}
-    <hr style="height: 0; visibility: hidden;"/>
-    <input type="submit" name="Add Clothing" value="Add Attire">
-</form>
+<p style="color: #880808; font-size: larger; font-style: italic; margin-left: 15; margin-bottom: 0;">A quick Rundown:</p>
+<p style="background-color: #d2b48c; font-style: italic; margin-top: 0; padding-top: 5; padding-left: 15; padding-bottom: 5;">
+    <span style="font-size: 20; font-style: italic; color: #fff; background-color: #000; text-align: center;">
+        &nbsp;💧 fitpic Endoreses Personality&nbsp;&nbsp;
+    </span>
+    <br/><br/>
+    <span style="font-size: 20; font-style: italic; color: #fff; background-color: #000; text-align: center;">
+        &nbsp;💧 fitpic Stimulates Entropy&nbsp;&nbsp;
+    </span>
+    <br/><br/>
+    <span style="font-size: 20; font-style: italic; color: #fff; background-color: #000; text-align: center;">
+        &nbsp;💧 fitpic Promotes Sustainability&nbsp;&nbsp;
+    </span>
+    <br/>
+    <span style="font-size: small; font-style: italic; color: #fff; background-color: #000; float: right; text-align: center;">
+        &nbsp;&lt;in beta/>&nbsp;&nbsp;
+    </span>
+    <br/>
+</p>
 
-{% for clothes in clothes %}
-    <div style="background-color: #f8e4b8; padding: 15; font-style:unset;">
-            <span style="font-size: large; font-style: italic; color: #fff; background-color: #000;">&nbsp;{{clothes}}&nbsp;&nbsp;</span>
-            <a class="button delete" href="{% url 'deleteclothing' clothes.id %}">delete</a>
-            <a class="button update" href="{% url 'updateclothing' clothes.id %}">update</a>
-            
-    </div>
-    <hr/>
-{% endfor %}
+<h1 style="color: #000; background-color: #f8e4b8; font-style: italic; font-size: xx-large; text-align: center;">MORE COMING SOON...</h1><hr/>
+<h1 style="color: #000; background-color: #f8e4b8; font-style: italic; font-size: xx-large; text-align: center;">MORE COMING SOON...</h1><hr/>
+<h1 style="color: #000; background-color: #f8e4b8; font-style: italic; font-size: xx-large; text-align: center;">MORE COMING SOON...</h1><hr/>
+<h1 style="color: #000; background-color: #f8e4b8; font-style: italic; font-size: xx-large; text-align: center;">MORE COMING SOON...</h1><hr/>
+<h1 style="color: #000; background-color: #f8e4b8; font-style: italic; font-size: xx-large; text-align: center;">MORE COMING SOON...</h1><hr/>
+<h1 style="color: #000; background-color: #f8e4b8; font-style: italic; font-size: xx-large; text-align: center;">MORE COMING SOON...</h1><hr/>
 
 </body>
